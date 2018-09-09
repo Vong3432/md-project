@@ -11,8 +11,13 @@
 
 .uk-navbar-container
 {
-    transition: 1s;
-    padding: 10px 30px;
+    transition: 0.4s;
+    padding: 5px 15px;    
+}
+
+.uk-navbar-container a
+{
+    font-size: 1.7vh;
 }
 
 
@@ -36,6 +41,7 @@
 #mobile-icon
 {
     display: none;
+    transition: 0.4s;
     padding: 10px 30px;
 }
 
@@ -74,7 +80,7 @@
 
     #parMobile
     {
-        margin-top: 0;
+        margin-top: -10px;
     }
 
     #parMobile h1
