@@ -4,8 +4,17 @@
 }
 
 .uk-navbar-container:not(.uk-navbar-transparent) {
-    background: black;    
+    background: black;
+    background-color: rgba(0,0,0,1);
+
 }
+
+.uk-navbar-container
+{
+    transition: 1s;
+    padding: 10px 30px;
+}
+
 
 /*#sm-md-display-none a
 {
@@ -35,7 +44,7 @@
 
     background-image: url('image/parallax1.jpg');
     min-height: 120vh;
-    margin-top: -20px;
+    margin-top: -30px;
 }
 
 #parMobile h1
