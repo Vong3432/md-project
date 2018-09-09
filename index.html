@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+<!-- Viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit-icons.min.js"></script> 
+
+<!-- JQuery  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- own CSS and JS -->
+<link rel="stylesheet" type="text/css" href="index.css">
+<script src="index.js"></script>
+
+</head>
+<body>
+
+<!-- Top sticky navbar // Pc version -->
+<div uk-sticky="sel-taget: .uk-navbar-container; cls-active: uk-navbar-sticky" id="sm-md-display-none">
+<nav class="uk-navbar-container uk-margin" uk-navbar="dropbar-mode:push">
+
+    <div class="uk-navbar-center">        
+        <!-- Left side -->
+        <div class="uk-navbar-center-left">        
+            <div>
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#" style="color: white;">Home</a></li>
+                    <li><a href="#">About us</a></li>                    
+                </ul>
+            </div>
+        </div>
+        <a class="uk-navbar-item uk-logo" href="#" style="color: white;">Watches.CO</a> 
+
+        <!-- Right side -->
+        <div class="uk-navbar-center-right">
+            
+            <ul class="uk-navbar-nav">
+                <li><a href="#">Watches</a>            
+                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2" uk-drop="animation: uk-animation-slide-top-small; duration: 1000;">
+                        <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+
+                            <!-- Left side of the column -->
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-active"><a href="#">Men</a></li>
+                                    <li class="uk-nav-divider"></li> <!-- divider -->
+                                    <li><a href="#">Casual</a></li>
+                                    <li><a href="#">Fashion</a></li>
+                                    <li><a href="#">Business</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Right side of the column -->
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-active"><a href="#">Women</a></li>
+                                    <li class="uk-nav-divider"></li><!-- divider -->
+                                    <li><a href="#">Casual</a></li>
+                                    <li><a href="#">Fashion</a></li>
+                                    <li><a href="#">Business</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                </li>
+            </ul>
+
+        </div>  <!-- Right side -->
+
+
+    </div> <!-- uk-navbar-center -->
+
+</nav>
+</div> <!-- uk-sticky -->
+
+
+<!-- Mobile navbar // Mobile version -->
+<a href="#mobile-navbar" id="mobile-icon" class="uk-button uk-button-default" uk-sticky uk-toggle>
+    <span>Watches.Co</span>
+    <span uk-icon="menu" style="float: right;margin-top: 10px;"></span>
+</a>
+    <div id="mobile-navbar" uk-offcanvas="mode: slide; overlay: true;">
+        <div class="uk-offcanvas-bar">
+
+            <ul class="uk-nav uk-nav-default">
+                <li class="uk-active"><a href="#" class="mobile-bar-active">Watches.Co</a></li>
+
+                <li class="uk-nav-header">Men</li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Casual</a></li>
+                <li><a href="#">Fashion</a></li>            
+                <li><a href="#">Business</a></li>
+
+                <li class="uk-nav-header">Women</li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Casual</a></li>
+                <li><a href="#">Fashion</a></li>            
+                <li><a href="#">Business</a></li>
+
+            </ul>
+
+        </div>
+    </div>
+
+
+<!-- Parallax -->
+<div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" id="parMobile">
+    <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+        <h1 uk-parallax="scale:2,2">Wel<span uk-parallax="opacity: 0,1;viewport: 0.5">come</span></h1>
+        <h1 uk-parallax="opacity: 0,0.2,1; y: -100,40; scale: 1,1; viewport: 0.5;">To</h1>
+        <h1 uk-parallax="opacity: 0,0.2,1; y: -100,60; scale: 1,2; viewport: 0.5;">Watches.Co</h1>
+        <p uk-parallax="opacity: 0,0.2,1; y: 100,80; scale: 1,2; viewport: 0.5;" style="color: white">Fashion & Convenient</p>
+    </div>
+</div>
+
+
+
+
+
+
+<div style="height: 2000px;"></div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+.mobile-bar-active
+{
+    font-size: 4vh;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: black;    
+}
+
+/*#sm-md-display-none a
+{
+    color: silver;
+}*/
+
+.uk-navbar-center-left .uk-navbar-nav a:hover
+{
+    color: white;
+    transition: 0.8s;
+}
+
+.uk-active a
+{
+    color: white;
+}
+
+
+#mobile-icon
+{
+    display: none;
+    padding: 10px 30px;
+}
+
+#parMobile
+{
+
+    background-image: url('image/parallax1.jpg');
+    min-height: 120vh;
+    margin-top: -20px;
+}
+
+#parMobile h1
+{
+    letter-spacing: 2px;
+}
+
+#parMobile p
+{
+    letter-spacing: 5px;
+}
+
+@media screen and (max-width: 768px)
+{
+    #sm-md-display-none
+    {
+        display: none;
+    }
+
+    #mobile-icon
+    {
+        display: block;        
+        background-color: black;
+        color: white;  
+        border:none;           
+    }    
+
+    #parMobile
+    {
+        margin-top: 0;
+    }
+
+    #parMobile h1
+    {
+        font-size: 4vh;
+    }
+
+    #parMobile p
+    {
+        font-size: 2vh;
+        letter-spacing: 2px;
+    }
+
+}
