@@ -78,11 +78,31 @@ body
 
     margin-top: 10%;
     margin-bottom: 10%;
+    letter-spacing: 3px;
+}
+
+.uk-card-title
+{
+    letter-spacing: 2px;
 }
 
 .uk-card-hover
 {
     cursor: pointer;
+}
+
+#scrollTop
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: none;
+    padding: 9px 12px;
+    background-color: black;
+    color: white;
+    border:none;
 }
 
 @media screen and (max-width: 768px)

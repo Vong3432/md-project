@@ -20,6 +20,12 @@
 <link rel="stylesheet" type="text/css" href="index.css">
 <script src="index.js"></script>
 
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+<!-- 
+    font-family: 'Merriweather', serif; // CategoryRow's h1
+ -->
+
 </head>
 <body>
 
@@ -179,44 +185,50 @@
 <!-- Watches Category -->
 <div style="background-image: url(image/fog.jpg);background-size: cover;background-repeat: no-repeat;min-height: 100vh;">
 
-<div class="uk-container uk-container-large">
+<div class="uk-container uk-container-large" uk-parallax="opacity: 0,1; y: -100,0; viewport: 0.5;media: @m">
 
-    <h1 class="uk-text-center uk-margin-xlarge-top" style="font-size: 6vh;">Watches</h1>
+    <h1 class="uk-text-center uk-margin-xlarge-top" style="
+    font-size: 6vh;letter-spacing: 3px;font-family: 'Merriweather', serif;">
+    Category
+    </h1>
 
     <div class="uk-grid uk-child-width-1-4@s uk-flex-center uk-text-center" uk-grid id="categoryRow">
 
         <div>
-            <div class="uk-card uk-card-secondary uk-card-hover uk-card-body">Casio</div>
+            <div class="uk-card uk-card-secondary uk-card-hover uk-card-body" uk-parallax="target: #categoryRow; y: -100; easing: 0.8;media: @m">Casio</div>
         </div>
 
         <div>
-            <div class="uk-card uk-card-default uk-card-hover uk-card-body">Daniel Wellington</div>
+            <div class="uk-card uk-card-secondary uk-card-hover uk-card-body" uk-parallax="target: #categoryRow; y: -100; easing: 0.8;media: @m">Daniel Wellington</div>
         </div>
 
         <div>
-            <div class="uk-card uk-card-secondary uk-card-hover uk-card-body">Eclipse</div>
+            <div class="uk-card uk-card-secondary uk-card-hover uk-card-body" uk-parallax="target: #categoryRow; y: -100; easing: 0.8;media: @m">Eclipse</div>
         </div>
 
         <div>
-            <div class="uk-card uk-card-default uk-card-hover uk-card-body">Seiko</div>
+            <div class="uk-card uk-card-secondary uk-card-hover uk-card-body" uk-parallax="target: #categoryRow; y: -100; easing: 0.8;media: @m">Seiko</div>
         </div>
 
         <div>
-            <div class="uk-card uk-card-secondary uk-card-hover uk-card-body">Triwa</div>
+            <div class="uk-card uk-card-secondary uk-card-hover uk-card-body" uk-parallax="target: #categoryRow; y: -100; easing: 0.8;media: @m">Triwa</div>
         </div>
 
         <div>
-            <div class="uk-card uk-card-default uk-card-hover uk-card-body">Skagen</div>
+            <div class="uk-card uk-card-secondary uk-card-hover uk-card-body" uk-parallax="target: #categoryRow; y: -100; easing: 0.8;media: @m">Skagen</div>
         </div>
 
         <div>
-            <div class="uk-card uk-card-secondary uk-card-hover uk-card-body">MVMT</div>
+            <div class="uk-card uk-card-secondary uk-card-hover uk-card-body" uk-parallax="target: #categoryRow; y: -100; easing: 0.8;media: @m">MVMT</div>
         </div>
 
     </div>
 
 </div>
 </div>
+
+
+<a href="#" uk-totop uk-scroll id="scrollTop" class="uk-button uk-button-default"></a>
 
 <!-- <div style="height: 2000px;"></div> -->
 </body>
