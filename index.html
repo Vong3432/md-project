@@ -38,7 +38,7 @@
                 </ul>
             </div>
         </div>
-        <a class="uk-navbar-item uk-logo" href="#" style="color: white;font-size: 1.9vh;">Watches.CO</a> 
+        <a class="uk-navbar-item uk-logo" href="#" style="color: white;font-size: 1.8vh;">Watches.CO</a> 
 
         <!-- Right side -->
         <div class="uk-navbar-center-right">
@@ -118,6 +118,12 @@
                 <li><a href="#">Fashion</a></li>            
                 <li><a href="#">Business</a></li>
 
+                <!-- Most right side // search -->
+                <form class="uk-search uk-search-default uk-margin-small-top">
+                    <span uk-search-icon></span>
+                    <input class="uk-search-input" type="search" placeholder="Search...">
+                </form>
+
             </ul>
 
         </div>
@@ -129,13 +135,47 @@
     <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
         <h1 uk-parallax=" y: 40; scale: 2,2.3; viewport: 0.5;">Welcome</h1>
         <h1 uk-parallax=" y: 60; scale: 1,1; viewport: 0.5;">To</h1>
-        <h1 uk-parallax=" y: 70; scale: 1,1.3; viewport: 0.5;">Watches.Co</h1>
-        <p uk-parallax=" y: 80; scale: 1,1.2; viewport: 0.5;" style="color: white">Fashion & Convenient</p>
+        <h1 uk-parallax="y: 70; scale: 1,1.3; viewport: 0.5;">Watches.Co</h1>
+        <p uk-parallax=" opacity:0,1; y: 80; scale: 1,1.2; viewport: 0.5;" style="color: white">Fashion & Convenient</p>
     </div>
 </div>
 
 
+<!-- Category Column -->
+<div class="uk-container uk-margin-xlarge-top" uk-parallax="y:-100,50;viewport:0.5;">
+    <h1 class="uk-text-center">Categories</h1>
 
+    <div class="uk-child-width-1-2@s uk-grid-match uk-margin-large-top" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body" uk-parallax="target: #test-easing; y: 200; easing: 1;media: @m">
+                <h3 class="uk-card-title">Hover</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body" uk-parallax="target: #test-easing; y: 200; easing: 2;media: @m">
+                <h3 class="uk-card-title">Default</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light" uk-parallax="target: #test-easing; y: 400; easing: 0.5;media: @m">
+                <h3 class="uk-card-title">Primary</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light" uk-parallax="target: #test-easing; y: 300; easing: 0.6;media: @m">
+                <h3 class="uk-card-title">Secondary</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <div style="height: 2000px;"></div>
 </body>

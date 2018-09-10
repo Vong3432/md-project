@@ -9,3 +9,4 @@ function topnavFunction(){
     document.getElementsByClassName("uk-navbar-container")[0].style.padding = "5px 15px";  
   }
 }
+
