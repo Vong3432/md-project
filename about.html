@@ -8,10 +8,9 @@
 </head>
 <body>  
  
-<div id="top-nav">
+<div id="top-nav" class="hidden-sm-and-down">
 	<v-app id="inspire">
 		<v-toolbar fixed>
-			<v-toolbar-side-icon></v-toolbar-side-icon>
 			<v-toolbar-title><a href="index.html" style="color: black">Watches.Co</a></v-toolbar-title>
 			<v-spacer></v-spacer>
 			<v-toolbar-items class="hidden-sm-and-down">
@@ -23,8 +22,66 @@
 	</v-app>
 </div>
 
-<div style="height: 2000px;"></div>
+<div id="mobile-app">
+	<v-app id="mobile-nav">
+		<v-layout
+      wrap
+      style="height: 200px;"
+    >
+      <v-container>
+        <v-layout>
+          <v-btn fixed
+            color="pink"
+            dark
+            @click.stop="drawer = !drawer" style="position:fixed;top: 0;left: 0;"
+          >
+            Toggle
+          </v-btn>
+        </v-layout>
+      </v-container>
+  
+      <v-navigation-drawer
+        v-model="drawer"           
+        dark
+       	fixed
+        temporary
+      >
+        <v-list class="pa-1">          
+  
+          <v-list-tile avatar tag="div">
+  
+            <v-list-tile-content>
+              <v-list-tile-title>Watches.Co</v-list-tile-title>
+            </v-list-tile-content>
+  
+            
+          </v-list-tile>
+        </v-list>
+  
+        <v-list class="pt-0" dense>
+          <v-divider light></v-divider>
+  
+          <v-list-tile
+            v-for="item in items"
+            :key="item.title"
+            @click=""
+          >
+            <v-list-tile-action>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-tile-action>
+  
+            <v-list-tile-content>
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-navigation-drawer>
+    </v-layout>
+	</v-app>
+</div>
 
+
+<div style="height: 2000px;"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
