@@ -13,3 +13,9 @@ function topnavFunction(){
   }
 }
 
+
+// Jquery part
+$( document ).ready(function(){
+
+});
+
