@@ -6,6 +6,13 @@
   <link rel="stylesheet" type="text/css" href="about.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css?family=Lobster|Cinzel" rel="stylesheet">
+<!-- 
+	font-family: 'Lobster', cursive; // #parallax-title
+	font-family: 'Cinzel', serif; // #card-center-text
+ -->
+
 </head>
 <body>  
  
@@ -22,7 +29,10 @@
 			</v-toolbar-items>
 		</v-toolbar>
 
-		<v-parallax src="image/card1.jpg" height="600"></v-parallax>
+		<v-parallax src="image/aboutParallax.jpg" height="600">
+			<h1 class="text-xs-center" id="parallax-title">We provide,the best,the reasonable price of watches.</h1>
+			<v-divider light style="border-color: white;width: 25%;margin:0 auto;margin-top: 30px;"></v-divider>
+		</v-parallax>
 
 		<!-- Card -->
 		<div id="theFirstCard"> 
@@ -31,7 +41,9 @@
 				<v-flex xs8 offset-xs2>
 					<v-hover>
 					<v-card dark class="card--flex-toolbar" slot-scope="{ hover }":class="`elevation-${hover ? 12 : 2}`">
-						<v-img src="https://vong3432.github.io/md-project/image/card1.jpg" aspect-ratio="1.75">	
+						<v-img src="image/carda.jpg" aspect-ratio="1.75">
+							<p id="card-center-text">Fashion</p>
+							<p id="card-center-small">All nicer and good watches are here for you to discover.</p>	
 						</v-img>
 
 						<!-- <v-toolbar card prominent>
@@ -53,7 +65,9 @@
 				<v-flex xs8 offset-xs2>
 					<v-hover>
 						<v-card  class="card--flex-toolbar" dark slot-scope="{ hover }":class="`elevation-${hover ? 12 : 2}`">
-							<v-img src="https://vong3432.github.io/md-project/image/card2.jpg" aspect-ratio="1.75">	
+							<v-img src="image/cardB.jpg" aspect-ratio="1.75">	
+								<p id="card-center-text">Reasonable Price</p>			
+								<p id="card-center-small">Despite the watches are really cool,the price will not increase, but decrease.That's mean <span style="font-style: italic;">YOU</span> can buy with <span>cheaper</span> price!</p>				
 							</v-img>
 						</v-card>
 					</v-hover>
