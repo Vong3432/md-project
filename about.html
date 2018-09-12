@@ -5,83 +5,134 @@
   <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="about.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
 </head>
 <body>  
  
-<div id="top-nav" class="hidden-sm-and-down">
+ <!-- Desktop nav -->
+<div id="top-nav">
 	<v-app id="inspire">
-		<v-toolbar fixed>
+		<v-toolbar fixed scroll-off-screen class="hidden-xs-only">
 			<v-toolbar-title><a href="index.html" style="color: black">Watches.Co</a></v-toolbar-title>
 			<v-spacer></v-spacer>
-			<v-toolbar-items class="hidden-sm-and-down">
+			<v-toolbar-items class="hidden-xs-and-down">
 				<v-btn flat style="background-color: silver">About us</v-btn>
 				<v-btn flat>Men</v-btn>
 				<v-btn flat>Women</v-btn>
 			</v-toolbar-items>
 		</v-toolbar>
+
+		<v-parallax src="https://upload.wikimedia.org/wikipedia/commons/9/92/Apple_Watch-.jpg" height="600"></v-parallax>
+
+		<!-- Card -->
+		<div id="theFirstCard"> 
+		<v-container grid-list-xl>
+			<v-layout>
+				<v-flex xs8 offset-xs2>
+					<v-hover>
+					<v-card dark class="card--flex-toolbar" slot-scope="{ hover }":class="`elevation-${hover ? 12 : 2}`">
+						<v-img src="https://cdn.pixabay.com/photo/2017/02/25/18/28/checklist-2098425_960_720.jpg" aspect-ratio="1.75">	
+						</v-img>
+
+						<!-- <v-toolbar card prominent>
+							<v-toolbar-title class="body-2 grey--text">Title</v-toolbar-title>
+
+							<v-spacer></v-spacer>
+
+							<v-btn icon>
+								<v-icon>search</v-icon>
+							</v-btn>
+						</v-toolbar> -->
+					</v-card>
+					</v-hover>
+				</v-flex>
+
+			</v-layout>
+
+			<v-layout>
+				<v-flex xs8 offset-xs2>
+					<v-hover>
+						<v-card  class="card--flex-toolbar" dark slot-scope="{ hover }":class="`elevation-${hover ? 12 : 2}`">
+							<v-img src="https://cdn.pixabay.com/photo/2017/08/01/12/26/people-2564955_960_720.jpg" aspect-ratio="1.75">	
+							</v-img>
+						</v-card>
+					</v-hover>
+				</v-flex>
+				
+			</v-layout>
+		</v-container>
+		</div>
+
+		<!-- Height -->
+		<div style="height: 2000px;"></div>
 	</v-app>
 </div>
 
-<div id="mobile-app">
+<!-- Mobile nav -->
+<div id="mobile-app" class="hidden-sm-and-up">
 	<v-app id="mobile-nav">
 		<v-layout
-      wrap
-      style="height: 200px;"
-    >
-      <v-container>
-        <v-layout>
-          <v-btn fixed
-            color="pink"
-            dark
-            @click.stop="drawer = !drawer" style="position:fixed;top: 0;left: 0;"
-          >
-            Toggle
-          </v-btn>
-        </v-layout>
-      </v-container>
+     	 wrap
+      	style="height: 200px;"
+    	>
+	      <v-container>
+	        <v-layout>
+	          <v-btn fixed
+	            
+	            dark
+	            @click.stop="drawer = !drawer" style="position:fixed;top: 0;right: 0;width: 100%;background-color: rgba(0,0,0,0.4);color: white"
+	          >
+	          	<p style="margin-bottom: 0;margin-right: 5px;">Watches.Co</p>
+	          	<v-space></v-space>
+	            <v-icon dark>menu</v-icon>
+	          </v-btn>
+	        </v-layout>
+	      </v-container>
   
-      <v-navigation-drawer
-        v-model="drawer"           
-        dark
-       	fixed
-        temporary
-      >
-        <v-list class="pa-1">          
-  
-          <v-list-tile avatar tag="div">
-  
-            <v-list-tile-content>
-              <v-list-tile-title>Watches.Co</v-list-tile-title>
-            </v-list-tile-content>
-  
-            
-          </v-list-tile>
-        </v-list>
-  
-        <v-list class="pt-0" dense>
-          <v-divider light></v-divider>
-  
-          <v-list-tile
-            v-for="item in items"
-            :key="item.title"
-            @click=""
-          >
-            <v-list-tile-action>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-tile-action>
-  
-            <v-list-tile-content>
-              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list>
-      </v-navigation-drawer>
-    </v-layout>
+	      <v-navigation-drawer
+	        v-model="drawer"           
+	        dark
+	       	fixed
+	        temporary
+	      >
+	        <v-list class="pa-1">          
+	  
+	          <v-list-tile avatar tag="div">
+	  
+	            <v-list-tile-content>
+	              <v-list-tile-title>Watches.Co</v-list-tile-title>
+	            </v-list-tile-content>
+	  
+	            
+	          </v-list-tile>
+	        </v-list>
+	  
+	        <v-list class="pt-0" dense>
+	          <v-divider light></v-divider>
+	  
+	          <v-list-tile
+	            v-for="item in items"
+	            :key="item.title"
+	            @click=""
+	          >
+	            <v-list-tile-action>
+	              <v-icon>{{ item.icon }}</v-icon>
+	            </v-list-tile-action>
+	  
+	            <v-list-tile-content>
+	              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+	            </v-list-tile-content>
+	          </v-list-tile>
+	        </v-list>
+	      </v-navigation-drawer>
+
+
+	    </v-layout>
 	</v-app>
 </div>
 
 
-<div style="height: 2000px;"></div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>

@@ -17,3 +17,7 @@ new Vue({
     }
   }
 })
+
+new Vue({
+	el: '#parallax',
+})
