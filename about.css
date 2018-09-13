@@ -38,6 +38,15 @@ a
 	font-size: 1vw;
 }
 
+#theFooter
+{
+	margin-top: 10%;
+}
+
+#interest-chip
+{
+	margin-top: 10%;
+}
 @media screen and (max-width: 600px)
 {
 	#card-center-text

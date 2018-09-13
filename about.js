@@ -21,3 +21,20 @@ new Vue({
 new Vue({
 	el: '#parallax',
 })
+
+new Vue({
+	el:'#interest-chip',
+})
+
+new Vue({
+  el: '#theFooter',
+  data: () => ({
+    icons: [
+      'fab fa fa-facebook',
+      'fab fa fa-twitter',
+      'fab fa fa-google-plus',
+      'fab fa fa-linkedin',
+      'fab fa fa-instagram'
+    ]
+  })
+})
