@@ -10,6 +10,17 @@ a
   margin-bottom: 100px;
 }
 
+#mobile-nav-content p
+{
+	padding: 12px;
+	margin-top: 10px;	
+	text-align: center;
+}
+
+#mobile-nav-content p a
+{
+	color: grey;
+}
 
 #parallax-title
 {

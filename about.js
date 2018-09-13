@@ -1,21 +1,23 @@
+
+
 new Vue({
 	el: '#top-nav',
-
-})
-
-new Vue({
-  el: '#mobile-app',
-  data () {
-    return {
+	data () {
+    return {    	
       drawer: null,
       items: [
-        { title: 'Home', icon: 'dashboard' },
+        { title: 'Home', icon: 'dashboard',target:'index.html'},
         { title: 'About', icon: 'question_answer' }
       ],
       mini: false,
       right: null
     }
   }
+})
+
+new Vue({
+  el: '#mobile-app',
+  
 })
 
 new Vue({

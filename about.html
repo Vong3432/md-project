@@ -23,13 +23,75 @@
 		<v-toolbar fixed scroll-off-screen class="hidden-xs-only">
 			<v-toolbar-title><a href="index.html" style="color: black">Watches.Co</a></v-toolbar-title>
 			<v-spacer></v-spacer>
-			<v-toolbar-items class="hidden-xs-and-down">
+
+			
+
+			<v-toolbar-items class="hidden-xs-only">
 				<v-btn flat style="background-color: silver">About us</v-btn>
 				<v-btn flat>Men</v-btn>
 				<v-btn flat>Women</v-btn>
 			</v-toolbar-items>
+
+
 		</v-toolbar>
 
+		<v-layout
+			    wrap
+			    style="position: fixed;top: 0;left: 0;z-index: 1" class="hidden-sm-and-up"
+			  >
+			    <v-container>
+			      <v-layout>
+			        <v-btn
+			          color="grey"
+			          dark
+			          @click.stop="drawer = !drawer"
+			        >
+			          Menu
+			        </v-btn>
+			      </v-layout>
+    			</v-container>
+
+			    <v-navigation-drawer
+			      v-model="drawer"
+			      absolute hide-overlay
+			       style="position: fixed;top: 0;left: 0;"
+			    >
+			      <v-list class="pa-1">
+			        <v-list-tile avatar>
+			          
+
+			          <v-list-tile-content>
+			            <v-list-tile-title class="text-xs-center">Watches.Co</v-list-tile-title>
+			          </v-list-tile-content>
+			        </v-list-tile>
+			      </v-list>
+
+			      <v-list class="pt-0" dense>
+			        <v-divider></v-divider>
+
+			       <!--  <v-list-tile
+			          v-for="item in items"
+			          :key="item.title"
+			          @click=""
+			        >
+			          <v-list-tile-action>
+			            <v-icon>{{ item.icon }}</v-icon>
+			          </v-list-tile-action>
+
+			          <v-list-tile-content>
+			            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+			          </v-list-tile-content>
+			        </v-list-tile> -->
+			        <div id="mobile-nav-content">
+			        	<p><a href="index.html">Home</a></p>
+			        	<p><a href="about.html" style="color: black;font-weight: bold;">About</a></p>
+			        	<p><a href="#">Men</a></p>
+			        	<p><a href="#">Women</a></p>
+			        </div>
+
+			      </v-list>
+			    </v-navigation-drawer>
+  			</v-layout>
 		<v-parallax src="https://vong3432.github.io/md-project/image/aboutParallax.jpg" height="600">
 			<h1 class="text-xs-center" id="parallax-title">We provide,the best,the reasonable price of watches.</h1>
 			<v-divider light style="border-color: white;width: 25%;margin:0 auto;margin-top: 30px;"></v-divider>
@@ -184,7 +246,7 @@
 
 
 
-<!-- Mobile nav -->
+<!-- Mobile nav
 <div id="mobile-app" class="hidden-sm-and-up">
 	<v-app id="mobile-nav">
 		<v-layout
@@ -246,7 +308,7 @@
 	    </v-layout>
 	</v-app>
 </div>
-
+ -->
 
 
 
