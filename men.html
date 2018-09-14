@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<!-- Viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/css/uikit.min.css" />
+<link rel="stylesheet" type="text/css" href="men.css">
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/js/uikit-icons.min.js"></script>	
+<script src="men.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Desktop nav -->
+<nav class="uk-navbar-container shadow uk-visible@s" uk-navbar uk-sticky="show-on-up: true;animation: uk-animation-slide-top;mode:hover">
+    <div class="uk-navbar-center">
+
+        <div class="uk-navbar-center-left"><div>
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="#">About us</a></li>                
+            </ul>
+        </div></div>
+        <a class="uk-navbar-item uk-logo" href="#">Watches.Co</a>
+        <div class="uk-navbar-center-right">
+        	<div>
+            <ul class="uk-navbar-nav">                
+                <li>
+                    <a href="#">Watches</a>
+                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
+                        <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-nav-header">Men<span id="nav-location">You're here!</span></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li><a href="#">Casual</a></li>
+                                    <li><a href="#">Business</a></li>
+                                    <li><a href="#">Fashion</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-nav-header">Women</li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li><a href="#">Casual</a></li>
+                                    <li><a href="#">Business</a></li>
+                                    <li><a href="#">Fashion</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>               
+            </ul>
+        	</div>
+    	</div>
+    </div>
+
+    <!-- Search bar -->
+    <div class="uk-navbar-right">
+
+        <div>
+            <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+            <div class="uk-drop" uk-drop="mode: click; pos: left-center; offset: 0">
+                <form class="uk-search uk-search-navbar uk-width-1-1">
+                    <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Mobile nav -->
+<div class="uk-offcanvas-content uk-hidden@s" uk-sticky style="background-color: rgba(0,0,0,0.9);">
+    
+    <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav" style="color: white;width: 100%;">
+    	<i class="fa fa-navicon"></i>
+    </button>    
+
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true" class="uk-text-center">
+        <div class="uk-offcanvas-bar">
+
+            <ul class="uk-nav uk-nav-default">
+                <li class="uk-active"><a href="#">Watches.Co</a></li>
+                <li class="uk-nav-header">Men<span id="nav-location">You're here!</span></li>
+                <li class="uk-nav-header">Women</li>
+                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: sign-in"></span>Sign in</a></li>
+                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: sign-out"></span>Sign up</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Carousel -->
+        <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: pull;min-height:400;max-height:600;">
+
+            <ul class="uk-slideshow-items">
+                <li>
+                    <img src="image/ad1.jpg" alt="" uk-cover>
+                    <div class="uk-position-center uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-light uk-hidden@s">
+                		<h2 class="uk-margin-remove">G-Shock</h2>
+                		<p class="uk-margin-remove">Toughest Watch of All Time.</p>
+            		</div>
+                </li>
+                <li>
+                    <img src="image/ad2.jpg" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="image/ad3.jpg" alt="" uk-cover>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+        </div>
+
+
+<div style="height: 2000px;"></div>
+</body>
+</html>
