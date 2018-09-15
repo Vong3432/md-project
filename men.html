@@ -1,133 +1,226 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" type="text/css" href="men.css">
 
-<!-- Viewport -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- UIkit CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/css/uikit.min.css" />
-<link rel="stylesheet" type="text/css" href="men.css">
-
-<!-- UIkit JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/js/uikit-icons.min.js"></script>	
-<script src="men.js"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- JQuery  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
 </head>
-<body>
+<body>  
+<!-- Desktop nav // Mobile nav is in inside-->
+<div id="top-nav">
+  <v-app id="inspire">
+    <v-toolbar fixed scroll-off-screen class="hidden-xs-only">
+      <v-toolbar-title><a href="index.html" style="color: black">Watches.Co</a></v-toolbar-title>
+      <v-spacer></v-spacer>
 
-<!-- Desktop nav -->
-<nav class="uk-navbar-container shadow uk-visible@s" uk-navbar uk-sticky="show-on-up: true;animation: uk-animation-slide-top;mode:hover">
-    <div class="uk-navbar-center">
+      
 
-        <div class="uk-navbar-center-left"><div>
-            <ul class="uk-navbar-nav">
-                <li class="uk-active"><a href="#">About us</a></li>                
-            </ul>
-        </div></div>
-        <a class="uk-navbar-item uk-logo" href="#">Watches.Co</a>
-        <div class="uk-navbar-center-right">
-        	<div>
-            <ul class="uk-navbar-nav">                
-                <li>
-                    <a href="#">Watches</a>
-                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
-                        <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
-                            <div>
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-nav-header">Men<span id="nav-location">You're here!</span></li>
-                                    <li class="uk-nav-divider"></li>
-                                    <li><a href="#">Casual</a></li>
-                                    <li><a href="#">Business</a></li>
-                                    <li><a href="#">Fashion</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-nav-header">Women</li>
-                                    <li class="uk-nav-divider"></li>
-                                    <li><a href="#">Casual</a></li>
-                                    <li><a href="#">Business</a></li>
-                                    <li><a href="#">Fashion</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>               
-            </ul>
-        	</div>
-    	</div>
-    </div>
+      <v-toolbar-items class="hidden-xs-only">
+        <v-btn flat href="about.html">About us</v-btn>
+        <v-btn flat id="pc-active">Men</v-btn>
+        <v-btn flat href="#women.html">Women</v-btn>
+      </v-toolbar-items>
 
-    <!-- Search bar -->
-    <div class="uk-navbar-right">
 
-        <div>
-            <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
-            <div class="uk-drop" uk-drop="mode: click; pos: left-center; offset: 0">
-                <form class="uk-search uk-search-navbar uk-width-1-1">
-                    <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
-                </form>
-            </div>
-        </div>
+    </v-toolbar>
 
-    </div>
+    <v-layout
+          wrap
+          style="position: fixed;top: 0;left: 0;z-index: 1" class="hidden-sm-and-up"
+        >
+          <v-container>
+            <v-layout>
+              <v-btn
+                color="grey"
+                dark
+                @click.stop="drawer = !drawer"
+              >
+                Menu
+              </v-btn>
+            </v-layout>
+          </v-container>
 
-</nav>
+          <v-navigation-drawer
+            v-model="drawer"
+            absolute hide-overlay
+             style="position: fixed;top: 0;left: 0;"
+          >
+            <v-list class="pa-1">
+              <v-list-tile avatar>
+                
 
-<!-- Mobile nav -->
-<div class="uk-offcanvas-content uk-hidden@s" uk-sticky style="background-color: rgba(0,0,0,0.9);">
-    
-    <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav" style="color: white;width: 100%;">
-    	<i class="fa fa-navicon"></i>
-    </button>    
+                <v-list-tile-content>
+                  <v-list-tile-title class="text-xs-center">Watches.Co</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+            </v-list>
 
-    <div id="offcanvas-nav" uk-offcanvas="overlay: true" class="uk-text-center">
-        <div class="uk-offcanvas-bar">
+            <v-list class="pt-0" dense>
+              <v-divider></v-divider>
+             
+              <div id="mobile-nav-content">
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="#" id="mobile-active">Men</a></p>
+                <p><a href="#">Women</a></p>
+              </div>
 
-            <ul class="uk-nav uk-nav-default">
-                <li class="uk-active"><a href="#">Watches.Co</a></li>
-                <li class="uk-nav-header">Men<span id="nav-location">You're here!</span></li>
-                <li class="uk-nav-header">Women</li>
-                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: sign-in"></span>Sign in</a></li>
-                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: sign-out"></span>Sign up</a></li>
-                <li class="uk-nav-divider"></li>
-                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
-            </ul>
+            </v-list>
 
-        </div>
-    </div>
+          </v-navigation-drawer>
+        </v-layout>       
+   </v-app>
+</div>      
+
+
+<!-- Carousel and items of it's bottom-->
+<div id="theCarousel">
+    <v-app>
+        <v-carousel hide-delimiters id="Carousel-item-responsive">
+            <v-carousel-item
+                v-for="(item,i) in items"
+                :key="i"
+                :src="item.src"
+              ></v-carousel-item>
+        </v-carousel>
+            
+      <!-- First grid -->
+      <v-container fluid grid-list-md>
+        <v-layout  justify-start row wrap>
+            <v-flex d-flex xs12 sm3 md3>
+              <v-card hover href="#">
+                <v-img src="image/casio.png"></v-img>
+              </v-card>
+            </v-flex>
+            <v-flex d-flex xs12 sm3 md3>
+              <v-card dark hover href="#">
+                 <v-img src="image/dw.jpg"></v-img>
+              </v-card>
+            </v-flex>
+            <v-flex d-flex xs12 sm3 md3>
+              <v-card hover href="#">
+                 <v-img src="image/ellese.png"></v-img>
+              </v-card>
+            </v-flex>
+
+                  <div class="hidden-xs-only" id="right-menu">
+                    <h3>Description</h3>
+                    <p>We've made a bunch of category for you to view.</p>
+                    <p>Check the amazing watches right now!</p>
+                    <h3>Categories</h3>
+                    <ul>
+                      <li>
+                        <a href="#">Casio</a>
+                      </li>
+
+                      <li>
+                        <a href="#">Daniel Wellington</a>
+                      </li>
+
+                      <li>
+                        <a href="#">Ellesse</a>
+                      </li>
+                      <li>
+
+                        <a href="#">Seiko</a>
+                      </li>
+
+                      <li>
+                        <a href="#">Skagen</a>
+                      </li>
+
+                      <li>
+                        <a href="#">Triwa</a>
+                      </li>
+
+                      <li>
+                        <a href="#">MVMT</a>
+                      </li>
+
+                    </ul>
+                  </div>
+
+        </v-layout>
+
+        <!-- Second grid -->
+        <v-layout  justify-start row wrap>
+            <v-flex d-flex xs12 sm3 md3>
+              <v-card hover href="#">
+                <v-img src="image/seiko.png"></v-img>
+              </v-card>
+            </v-flex>
+            <v-flex d-flex xs12 sm3 md3>
+              <v-card dark hover href="#">
+                 <v-img src="image/skagen.png"></v-img>
+              </v-card>
+            </v-flex>
+            <v-flex d-flex xs12 sm3 md3>
+              <v-card hover href="#">
+                 <v-img src="image/triwa.png"></v-img>
+              </v-card>
+            </v-flex>
+
+        </v-layout>
+
+        <!-- Third grid -->
+        <v-layout  justify-start row wrap>
+            <v-flex d-flex xs12 sm3 md3>
+              <v-card hover href="#">
+                <v-img src="image/MVMT.png"></v-img>
+              </v-card>
+            </v-flex>
+        </v-layout>
+
+      </v-container>
+
+      <!-- Footer -->
+      <div id="theFooter">
+          <v-footer
+            dark
+            height="auto"
+          >
+            <v-card
+              flat
+              tile
+              class="dark lighten-1 white--text text-xs-center" style="width: 100%"
+            >
+              <v-card-text>
+                <v-btn
+                  v-for="icon in icons"
+                  :key="icon"
+                  class="mx-3 white--text"
+                  icon
+                >
+                  <v-icon size="24px">{{ icon }}</v-icon>
+                </v-btn>
+              </v-card-text>
+        
+              <v-card-text class="white--text pt-0">
+                This is a demo website, not for business usage,a template.
+              </v-card-text>
+        
+              <v-divider></v-divider>
+        
+              <v-card-text class="white--text">
+                &copy;2018 — <strong>Vong Nyuk Soon</strong>
+              </v-card-text>
+            </v-card>
+          </v-footer>
+      </div>
+
+    </v-app>
 
 </div>
 
-<!-- Carousel -->
-        <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: pull;min-height:400;max-height:600;">
 
-            <ul class="uk-slideshow-items">
-                <li>
-                    <img src="image/ad1.jpg" alt="" uk-cover>
-                    <div class="uk-position-center uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-light uk-hidden@s">
-                		<h2 class="uk-margin-remove">G-Shock</h2>
-                		<p class="uk-margin-remove">Toughest Watch of All Time.</p>
-            		</div>
-                </li>
-                <li>
-                    <img src="image/ad2.jpg" alt="" uk-cover>
-                </li>
-                <li>
-                    <img src="image/ad3.jpg" alt="" uk-cover>
-                </li>
-            </ul>
+ 
 
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-
-        </div>
-
-
-<div style="height: 2000px;"></div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+<script src="men.js"></script>
 </body>
 </html>
