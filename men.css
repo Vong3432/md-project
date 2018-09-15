@@ -60,6 +60,16 @@ a
 	color: #013243;
 }
 
+@media screen and (max-height:  400px)
+{
+	#right-menu
+	{
+		position: absolute;
+		right: 0;
+		margin-top: 20%;
+	}
+}
+
 @media screen and (max-width: 600px)
 {
 	#theCarousel
@@ -71,4 +81,5 @@ a
 	{		
 		height: 200px;		
 	}
+
 }
