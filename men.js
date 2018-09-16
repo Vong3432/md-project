@@ -33,4 +33,13 @@ new Vue({
   }
 })
 
-// ad blocker
+// ad block detect
+$(document).ready(function(){
+    if($("#wrapfabtest").height() > 0) {
+        alert('No AdBlock :)');
+        
+    } else {
+        alert('AdBlock Detected,Please kindly disable it, this website does not contain any ads but it effect some images. ');
+        
+    }
+});

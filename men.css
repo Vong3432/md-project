@@ -60,6 +60,13 @@ a
 	color: #013243;
 }
 
+/*ad block detect*/
+.adBanner {
+    background-color: transparent;
+    height: 1px;
+    width: 1px;
+}
+
 @media screen and (max-height:  700px)
 {
 	#right-menu
