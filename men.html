@@ -7,9 +7,17 @@
   <link rel="stylesheet" type="text/css" href="men.css">
 
 <!-- JQuery  -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Ad blocker -->
+<script src="/js/ads.js"></script>
 </head>
 <body>  
+<script>
+  if( window.canRunAds === undefined ){
+        // adblocker detected, show fallback
+        showFallbackImage();
+      }
+</script>
 <!-- Desktop nav // Mobile nav is in inside-->
 <div id="top-nav">
   <v-app id="inspire">
