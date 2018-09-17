@@ -14,6 +14,8 @@ new Vue({
   }
 })
 
+
+
 new Vue({
   el: '#theCarousel',
   data () {

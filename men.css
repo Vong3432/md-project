@@ -36,29 +36,7 @@ a
 	right: 0;
 }
 
-#right-menu
-{
-	position: fixed;
-	right: 0;
-	text-align: left;
-	font-size: 1.5vh;
-	max-width: 150px;
-	word-wrap: break-word;
-	margin-top: -10px;
-	margin-left: 5%;
-	margin-right: 5%;
-	z-index: 6;
-}
 
-#right-menu ul
-{
-	list-style-type: square;
-}
-
-#right-menu li a
-{
-	color: #013243;
-}
 
 /*ad block detect*/
 .adBanner {
@@ -67,14 +45,22 @@ a
     width: 1px;
 }
 
+#card1-parallax
+{
+	margin-top: -350px;	
+	font-size: 2vh;
+	letter-spacing: 3px;	
+}
+
+.card-content
+{
+	margin: 0 auto;
+	text-align: center;
+}
+
 @media screen and (max-height:  700px)
 {
-	#right-menu
-	{
-		position: absolute;
-		right: 0;
-		margin-top: 20%;
-	}
+	
 }
 
 @media screen and (max-width: 600px)
